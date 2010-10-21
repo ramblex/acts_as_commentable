@@ -1,7 +1,7 @@
 Acts As Commentable
 =================
 
-Allows for comments to be added to multiple and different models.
+Allows for comments with threads (through acts_as_tree) to be added to multiple and different models.
 
 == Resources
 
@@ -29,10 +29,10 @@ Install
     gem sources -a http://gems.github.com
 
     Install the gem(s):
-    sudo gem install jackdempsey-acts_as_commentable
+    sudo gem install ramblex-acts_as_commentable
 
     add the folloowing line to your environment.rb
-    config.gem 'jackdempsey-acts_as_commentable', :lib => 'acts_as_commentable', :source => "http://gems.github.com"
+    config.gem 'ramblex-acts_as_commentable', :lib => 'acts_as_commentable', :source => "http://gems.github.com"
 
    * The gem's have also been pushed to gemcutter.org, so if you have that in your sources, you can just 'gem install acts_as_commentable'
    
@@ -70,6 +70,10 @@ Install
  #
  # model = Model.find(1)
  # model.comments.get(0).commentable == model
+
+ * Comment threading
+ 
+ Uses acts_as_tree 
 
 == Credits
 
